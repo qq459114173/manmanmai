@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> 慢慢买比价网--手机版</title>
+    <!--添加视口-->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- 引入bootstrap文件 -->
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+    <link rel="icon" href="./images/慢.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/base.css">
+    <!-- 引入字体库 -->
+    <link rel="stylesheet" href="./font/font_u9sb87clzak/iconfont.css">
+    <!-- 引入less文件 -->
+    <link rel="stylesheet/less" href="./less/index.less">
+    <script src="./js/less.js"></script>
+</head>
+
+<body>
+    <!-- 头部部分 -->
+    <header id="header">
+        <div class="pull-left">
+            <a href="javascript:void(0)" onclick="location.reload()">
+                <img src="./images/header_logo.png" alt="">
+            </a>
+        </div>
+        <div class="pull-right">
+            <a href="http://android.myapp.com/myapp/detail.htm?apkName=com.manmanbuy.bijia&ADTAG=mobile" target="_black">
+                <img src="./images/header_app.png" alt="">
+            </a>
+        </div>
+    </header>
+    <!-- 搜索框部分 -->
+    <section id="search">
+        <div class="searchtext pull-left">
+            <input type="text" placeholder="请输入你想比价的商品">
+        </div>
+        <div class="searchbtn pull-right">
+            <input type="button" value="搜索">
+        </div>
+    </section>
+    <!-- 导航菜单栏部分 -->
+    <nav id="nav">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-3">
+                    <img src="./images/ic_search.png" alt="">
+                    <p>比价搜索</p>
+                </div>
+                <div class="col-xs-3">
+                    <img src="./images/ic_cu.png" alt="">
+                    <p>省钱控</p>
+                </div>
+                <div class="col-xs-3">
+                    <img src="./images/ic_coudanpin.png" alt="">
+                    <p>国内折扣</p>
+                </div>
+                <div class="col-xs-3">
+                    <img src="./images/ic_bcj.png" alt="">
+                    <p>白菜价</p>
+                </div>
+                <div class="col-xs-3">
+                    <img src="./images/haitao.png" alt="">
+                    <p>海淘折扣</p>
+                </div>
+                <div class="col-xs-3">
+                    <img src="./images/ic_temai.png" alt="">
+                    <p>优惠劵</p>
+                </div>
+                <div class="col-xs-3">
+                    <img src="./images/ic_trend.png" alt="">
+                    <p>查历史价</p>
+                </div>
+                <div class="col-xs-3 domore">
+                    <img src="./images/gengduo.png" alt="">
+                    <p>更多</p>
+                </div>
+                <div class="col-xs-3 more">
+                    <img src="./images/ic_coudanpin.png" alt="">
+                    <p>凑单品</p>
+                </div>
+                <div class="col-xs-3 more">
+                    <img src="./images/ic_kb.png" alt="">
+                    <p>口碑排行</p>
+                </div>
+                <div class="col-xs-3 more">
+                    <img src="./images/ic_mall.png" alt="">
+                    <p>商城导航</p>
+                </div>
+                <div class="col-xs-3 more">
+                    <img src="./images/ic_pp.png" alt="">
+                    <p>品牌大全</p>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- 超值折扣推荐部分 -->
+    <section id="recommend">
+        <div class="zktj">
+            <span class="pull-left">超值折扣推荐</span>
+            <img class="pull-right" src="http://www.zuyushop.com/wap/images/more.png" alt="">
+        </div>
+        <!-- 折扣推荐内容 -->
+        <div class="container" id='dis'>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="media">
+                        <div class="media-left media-middle">
+                            <a href="#">
+                                <img class="media-object" src="http://wnzk-img.zuyushop.com/r_img/img/20180919/17/e45c12a25db146b9b896fb223f4becf3.jpg"
+                                    alt="">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <div class="title">
+                                <span class="media-heading">LittleSwan 小天鹅 TG90V21DG5 变频 滚筒洗衣机 9公斤 </span>
+                                <span class="money">2099元包邮（满减）</span>
+                            </div>
+                            <div class="time">
+                                <span>苏宁易购 | 09-19 17:09</span>
+                                <span class="icon">
+                                    <i class="iconfont icon-xiaoxi"></i>
+                                    <span>0</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 更多优惠 -->
+        <div class="more_bar">
+            <a href="#">更多优惠信息 »</a>
+        </div>
+    </section>
+    <!-- 尾部登录注册部分 -->
+    <footer id="footer">
+        <div class="jxhd">
+            <span>品牌排行</span>
+            <img class="img" src="http://www.zuyushop.com/wap/images/more.png" alt="">
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-4">
+                    <a href="./01-indexlogin.html">登录</a>
+                </div>
+                <div class="col-xs-4">
+                    <a href="./01-indexRegister.html">注册</a>
+                </div>
+                <div class="col-xs-4">
+                    <a href="#header" id='top'>
+                        <img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">
+                        <span>返回顶部</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>
+                <a class="app" href="http://android.myapp.com/myapp/detail.htm?apkName=com.manmanbuy.bijia&ADTAG=mobile">手机APP下载</a>
+                <a href="#">慢慢买手机版</a>
+                -- 掌上比价平台
+            </p>
+            <p>
+                m.manmanbuy.com
+            </p>
+        </div>
+    </footer>
+    <script src="./jquery/jquery.js"></script>
+    <script src="./bootstrap/js/bootstrap.js"></script>
+    <script src='./js/index.js'></script>
+    <!-- 引入模板 -->
+    <script src="./js/template-web.js"></script>
+
+    <!-- 准备模板 -->
+    <script type='text/html' id='temp1'>
+        {{each list value}}
+        <div class="col-xs-12">
+                <div class="media">
+                    <div class="media-left media-middle">
+                        <a href="#">
+                           {{@value.productImgSm}}
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <div class="title">
+                            <span class="media-heading">{{value.productName}}</span>
+                            <span class="money">{{value.productPinkage}}</span>
+                        </div>
+                        <div class="time">
+                            <span>{{value.productFrom}} |{{value.productTime}}</span>
+                            <span class="icon">
+                                <i class="iconfont icon-xiaoxi"></i>
+                                <span>{{value.productComCount}}</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+    </script>
+    <!-- 发送请求 -->
+    <script>
+        var xhr=new XMLHttpRequest();
+        xhr.open('get','http://mmb.ittun.com/api/getmoneyctrl');
+        xhr.send();
+        xhr.onload=function(){
+         var obj=JSON.parse(xhr.responseText);
+         console.log(obj);
+         var html=template('temp1',{list:obj.result});
+            document.getElementById('dis').innerHTML=html;
+        }
+    </script>
+</body>
+
+</html>
