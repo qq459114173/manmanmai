@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>比价选购-慢慢买手机版</title>
+    <!--添加视口-->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- 引入MUI框架包 -->
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <!-- 引入incon图标 -->
+    <link rel="icon" href="./images/慢.png" type="image/x-icon">
+    <!-- 引入字体库 -->
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+    <!-- 引入less文件 -->
+    <link rel="stylesheet" href="./less/02-storeList.css">
+    <script src="./lib/less/less.js"></script>
+    <script src="js/rem.js"></script>
+</head>
+
+<body>
+    <!-- 头部部分 -->
+    <header id="header">
+        <div class="pull-left">
+            <a href="01-index.html">
+                <img src="./images/header_logo.png" alt="">
+            </a>
+        </div>
+        <div class="pull-right">
+            <a href="http://android.myapp.com/myapp/detail.htm?apkName=com.manmanbuy.bijia&ADTAG=mobile" target="_black">
+                <img src="./images/header_app.png" alt="">
+            </a>
+        </div>
+    </header>
+    <!-- 搜索框部分 -->
+    <section id="search">
+        <div class="searchtext pull-left">
+            <input type="text" placeholder="请输入你想比价的商品">
+        </div>
+        <div class="searchbtn pull-right">
+            <input type="button" value="搜索">
+        </div>
+    </section>
+    <!-- 主体区域 -->
+    <main id="main">
+        <section id='section'>
+            <!-- 标题部分 -->
+            <div class="title">
+                <ul>
+                    <li><a href="01-index.html">首页 ></a></li>
+                    <li><a href="02-compareSearch.html">全部分类 ></a></li>
+                    <li id='subTitle'><a href="02-storeList.html"></a></li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-filter"></i> 筛选
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 主体内容部分 -->
+            <div class="content">
+                <ul class="mui-table-view">
+                    <li class="mui-table-view-cell mui-media">
+                        <a href="javascript:;">
+                            <img class="mui-media-object mui-pull-left" src="http://pro.zuyushop.com:8015/ProPic/20166/Thumb/Thumb_2016060015515937123.png">
+                            <div class="mui-media-body">
+                                <div class="product-name">
+                                    <p>乐视TV(Letv)S50 Air全配版2D 50英寸 全高清LED液晶电视</p>
+                                </div>
+                                <div class="money">
+                                    <p>￥1999</p>
+                                </div>
+                                <div class="product-info mui-clearfix">
+                                    <span class="mui-pull-left">5商城报价</span>
+                                    <span class="mui-pull-right">有4169人评论</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 分页部分 -->
+            <div id="page">
+                <button class='pre'><a href="#">上一页</a></button>
+                <select name="" id="select">
+                </select>
+                <i class="fa fa-caret-down"></i>
+                <button class='next'><a href="#">下一页</a></button>
+            </div>
+        </section>
+    </main>
+    <!-- 尾部登录注册部分 -->
+    <footer id="footer">
+        <div class="container-fluid">
+            <div class="mui-row">
+                <div class="mui-col-xs-4">
+                    <a href="./01-indexlogin.html">登录</a>
+                </div>
+                <div class="mui-col-xs-4">
+                    <a href="./01-indexRegister.html">注册</a>
+                </div>
+                <div class="mui-col-xs-4">
+                    <a href="#" id='top'>
+                        <img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">
+                        <span>返回顶部</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>
+                <a class="app" href="http://android.myapp.com/myapp/detail.htm?apkName=com.manmanbuy.bijia&ADTAG=mobile">手机APP下载</a>
+                <a href="#">慢慢买手机版</a> -- 掌上比价平台
+            </p>
+            <p>
+                m.manmanbuy.com
+            </p>
+        </div>
+    </footer>
+    <!-- 引入模板引擎 -->
+    <script src="lib/artTemplate/template-web.js"></script>
+    <script src="lib/mui/js/mui.js"></script>
+    <!--引入zeptojs文件 -->
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <script src="js/02-storeList.js"></script>
+    <script src="js/base.js"></script>
+    <!-- 准备商品列表模板 -->
+    <script type='text/html' id='listTpl'>
+        {{each result value index}}
+        <li class="mui-table-view-cell mui-media" >
+            <a href="#" id='{{value.productId}}'>
+                {{@value.productImg}}
+                <div class="mui-media-body">
+                    <div class="product-name">
+                        <p>{{value.productName}}</p>
+                    </div>
+                    <div class="money">
+                        <p>{{value.productPrice}}</p>
+                    </div>
+                    <div class="product-info mui-clearfix">
+                        <span class="mui-pull-left">{{value.productQuote}}</span>
+                        <span class="mui-pull-right">{{value.productCom}}</span>
+                    </div>
+                </div>
+            </a>
+        </li>
+        {{/each}}
+    </script>
+</body>
+
+</html>

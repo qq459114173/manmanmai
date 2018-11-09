@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>凑单品-慢慢买</title>
+    <!--添加视口-->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- 引入MUI框架包 -->
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <!-- 引入incon图标 -->
+    <link rel="icon" href="./images/慢.png" type="image/x-icon">
+    <!-- 引入字体库 -->
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet" href="lib/fontAwesome/fonts/font_nd9zedv19nb/iconfont.css">
+    <!-- 引入less文件 -->
+    <link rel="stylesheet" href="./less/08-collect.css">
+    <script src="./lib/less/less.js"></script>
+    <script src="js/rem.js"></script>
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <a href="01-index.html" class="return fa fa-angle-left">
+        </a>
+        <h4>凑单品</h4>
+        <img src="./images/header_app.png" alt="">
+    </header>
+        <!-- 主体区域 -->
+        <main id="main">
+            <!-- 头部搜索部分 -->
+            <section id='search'>
+                <div class="filter">
+                    <ul>
+                        <li>
+                            <a href="#">
+                            <select id='store'>
+                                <option value="">面板1子内容</option>
+                                <option value="">面板2子内容</option>
+                                <option value="">面板3子内容</option>
+                            </select>
+                            <i class="fa fa-sort-desc"></i>
+                        </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <select id='region'>
+                                <option value="">面板2子内容</option>
+                                <option value="">面板2子内容</option>
+                                <option value="">面板2子内容</option>
+                            </select>
+                            <i class="fa fa-sort-desc"></i>
+                        </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <select name="" id="">
+                                <option value="">全部价格</option>
+                            </select>
+                            <i class="fa fa-sort-desc"></i>
+                        </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="search">
+                    <i class="iconfont icon-search"></i>
+                </div>
+            </section>
+            <!-- 主体内容部分 -->
+            <section id='section'>
+                <ul>
+                    <li>
+                        <a href="#">
+                        <div class="pic">
+                            <img src="http://img13.360buyimg.com/n7/jfs/t13213/178/1401141293/142483/29ff652a/5a1f7bbcNb3f5fb3c.jpg"></div>
+                        <div class="title">上味源 劲爆香辣鱼 12g</div>
+                        <div class="other">
+                            <div class="price"><em>¥</em>0.90</div>
+                            <div class="btn">去凑单</div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                    </li>
+                </ul>
+            </section>
+        </main>
+        <!-- 尾部登录注册部分 -->
+        <footer id="footer">
+            <div class="container-fluid">
+                <div class="mui-row">
+                    <div class="mui-col-xs-4">
+                        <a href="./01-indexlogin.html">登录</a>
+                    </div>
+                    <div class="mui-col-xs-4">
+                        <a href="./01-indexRegister.html">注册</a>
+                    </div>
+                    <div class="mui-col-xs-4">
+                        <a href="#" id='top'>
+                        <img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">
+                        <span>返回顶部</span>
+                    </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <p>
+                    <a class="app" href="http://android.myapp.com/myapp/detail.htm?apkName=com.manmanbuy.bijia&ADTAG=mobile">手机APP下载</a>
+                    <a href="#">慢慢买手机版</a> -- 掌上比价平台
+                </p>
+                <p>
+                    m.manmanbuy.com
+                </p>
+            </div>
+        </footer>
+        <!-- 引入模板引擎 -->
+        <script src="lib/artTemplate/template-web.js"></script>
+        <script src="lib/mui/js/mui.js"></script>
+        <!--引入zeptojs文件 -->
+        <script src="./lib/zepto/zepto.min.js"></script>
+        <script src="./lib/zepto/zepto.picLazyLoad.js"></script>
+        <script src="js/08-collect.js"></script>
+        <script src="js/base.js"></script>
+        <!-- 准备凑单品列表模板 -->
+        <script type='text/html' id='collectTpl'>
+            {{each result value}}
+        <li>
+            <a href="#">
+                <div class="pic">
+                    <img src="{{value.productImg}}"></div>
+                <div class="title">{{value.productName}}</div>
+                <div class="other">
+                    <div class="price">{{value.productPrice}}</div>
+                    <div class="btn">去凑单</div>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+        </li>
+        {{/each}}
+    </script>
+        <script type='text/html' id='collectTpl2'>
+            {{each result value index}} {
+        <option class="{{value.shopId}}">{{value.shopName}}</option>
+        {{/each}}
+    </script>
+        <script type='text/html' id='collectTpl3'>
+            {{each result value index}} {{if index==0}}
+        <option selected='selected'>{{value.areaName}}</option>
+        {{else}}
+        <option>{{value.areaName}}</option>
+        {{/if}} {{/each}}
+    </script>
+</body>
+
+</html>

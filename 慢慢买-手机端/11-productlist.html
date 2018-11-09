@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>慢慢买--商品列表</title>
+    <!--添加视口-->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- 引入MUI框架包 -->
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <!-- 引入incon图标 -->
+    <link rel="icon" href="./images/慢.png" type="image/x-icon">
+    <!-- 引入字体库 -->
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+    <!-- 引入less文件 -->
+    <link rel="stylesheet/less" href="./less/11.productlist.less">
+    <script src="./lib/less/less.js"></script>
+    <script src="js/rem.js"></script>
+</head>
+
+<body>
+    <!-- 头部部分 -->
+    <header id="header">
+        <a href="javascript:history.back();" class="return fa fa-angle-left">
+        </a>
+        <h4>慢慢买--商品列表</h4>
+        <img src="./images/header_app.png" alt="">
+    </header>
+        <!-- 主体区域 -->
+        <main id="main">
+            <div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <!-- 搜索框部分 -->
+                    <section id="search">
+                        <div class="searchtext pull-left">
+                            <input type="text" placeholder="请输入你想搜索的商品">
+                        </div>
+                        <div class="searchbtn pull-right">
+                            <a href="#">
+                            <input type="button" value="搜索">
+                        </a>
+                        </div>
+                    </section>
+                    <section id='section'>
+                        <!-- 标题部分 -->
+                        <div class="title">
+                            <div class="mui-row">
+                                <div class="mui-col-xs-3 active"><a href="11-productlist.html"><span>综合</span><i class="fa fa-angle-down"></i></a></div>
+                                <div class="mui-col-xs-3"><a href="#" data-sort-type='num' data-sort='1'><span>销量</span><i class="fa fa-angle-down"></i></a></div>
+                                <div class="mui-col-xs-3"><a href="#" data-sort-type='price' data-sort='1'><span>价格</span><i class="fa fa-angle-down"></i></a></div>
+                                <div class="mui-col-xs-3"><a href="#"><i class="fa fa-filter"></i><span>筛选</span></a></div>
+                            </div>
+                        </div>
+                        <!-- 主体内容部分 -->
+                        <div class="content">
+                            <ul class="mui-table-view">
+                                <li class="mui-table-view-cell mui-media">
+                                    <a href="javascript:;">
+                                    <img class="mui-media-object mui-pull-left" src="http://pro.zuyushop.com:8015/ProPic/20166/Thumb/Thumb_2016060015515937123.png">
+                                    <div class="mui-media-body">
+                                        <div class="product-name">
+                                            <p>乐视TV(Letv)S50 Air全配版2D 50英寸 全高清LED液晶电视</p>
+                                        </div>
+                                        <div class="money">
+                                            <p>￥1999</p>
+                                        </div>
+                                        <div class="product-info mui-clearfix">
+                                            <span class="mui-pull-left">5商城报价</span>
+                                            <span class="mui-pull-right">有4169人评论</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+        <!-- 尾部登录注册部分 -->
+        <footer id="footer">
+            <div class="container-fluid">
+                <div class="mui-row">
+                    <div class="mui-col-xs-4">
+                        <a href="./01-indexlogin.html">登录</a>
+                    </div>
+                    <div class="mui-col-xs-4">
+                        <a href="./01-indexRegister.html">注册</a>
+                    </div>
+                    <div class="mui-col-xs-4">
+                        <a href="#" id='top'>
+                        <img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">
+                        <span>返回顶部</span>
+                    </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <p>
+                    <a class="app" href="http://android.myapp.com/myapp/detail.htm?apkName=com.manmanbuy.bijia&ADTAG=mobile">手机APP下载</a>
+                    <a href="#">慢慢买手机版</a> -- 掌上比价平台
+                </p>
+                <p>
+                    m.manmanbuy.com
+                </p>
+            </div>
+        </footer>
+        <!-- 引入模板引擎 -->
+        <script src="lib/artTemplate/template-web.js"></script>
+        <script src="lib/mui/js/mui.js"></script>
+        <!--引入zeptojs文件 -->
+        <script src="./lib/zepto/zepto.min.js"></script>
+        <script src="js/11.productList.js"></script>
+        <script src="js/base.js"></script>
+        <!-- 准备商品列表模板 -->
+        <script type='text/html' id='productlistTpl'>
+            {{if result.length>0}}
+        {{each result value index}}
+        <li class="mui-table-view-cell mui-media" >
+            <a href="#" data-id={{value.productId}}>
+                {{@value.productImg}}
+                <div class="mui-media-body">
+                    <div class="product-name">
+                        <p>{{value.productName}}</p>
+                    </div>
+                    <div class="money">
+                        <p>{{value.productPrice}}</p>
+                    </div>
+                    <div class="product-info mui-clearfix">
+                        <span class="mui-pull-left">{{value.productQuote}}</span>
+                        <span class="mui-pull-right">{{value.productCom}}</span>
+                    </div>
+                </div>
+            </a>
+        </li>
+        {{/each}}
+        {{else}}
+        <p>没有更多数据了</p>
+        {{/if}}
+    </script>
+        <!-- 准备商品列表模板 -->
+        <script type='text/html' id='productlistTpl2'>
+            {{each result value index}}
+        {[if value.]}
+        <li class="mui-table-view-cell mui-media" >
+            <a href="#" data-id={{value.productId}}>
+                {{@value.productImg}}
+                <div class="mui-media-body">
+                    <div class="product-name">
+                        <p>{{value.productName}}</p>
+                    </div>
+                    <div class="money">
+                        <p>{{value.productPrice}}</p>
+                    </div>
+                    <div class="product-info mui-clearfix">
+                        <span class="mui-pull-left">{{value.productQuote}}</span>
+                        <span class="mui-pull-right">{{value.productCom}}</span>
+                    </div>
+                </div>
+            </a>
+        </li>
+        {{/each}}
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> 慢慢买比价网--手机版</title>
+    <!--添加视口-->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- 引入MUI框架包 -->
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <!-- 引入incon图标 -->
+    <link rel="icon" href="./images/慢.png" type="image/x-icon">
+    <!-- 引入字体库 -->
+    <link rel="stylesheet" href="./font/font_u9sb87clzak/iconfont.css">
+    <!-- <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css"> -->
+    <!-- 引入less文件 -->
+    <link rel="stylesheet" href="./less/index.css">
+    <script src="./lib/less/less.js"></script>
+    <script src="js/rem.js"></script>
+</head>
+
+<body>
+    <!-- 头部部分 -->
+    <header id="header">
+        <div class="pull-left">
+            <a href="javascript:void(0)" onclick="location.reload()">
+                <img src="./images/header_logo.png" alt="">
+            </a>
+        </div>
+        <div class="pull-right">
+            <a href="http://android.myapp.com/myapp/detail.htm?apkName=com.manmanbuy.bijia&ADTAG=mobile" target="_black">
+                <img src="./images/header_app.png" alt="">
+            </a>
+        </div>
+    </header>
+    <!-- 搜索框部分 -->
+    <section id="search">
+        <div class="searchtext pull-left">
+            <input type="text" placeholder="请输入你想比价的商品">
+        </div>
+        <div class="searchbtn pull-right">
+            <a href="11-searchList.html">
+                <input type="button" value="搜索">
+            </a>
+        </div>
+    </section>
+    <!-- 导航菜单栏部分 -->
+    <nav id="nav">
+        <div class="container">
+            <div class="mui-row">
+                <div class="mui-col-xs-3">
+                    <a href="#">
+                        <img src="./images/ic_search.png" alt="">
+                        <p>比价搜索</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- 超值折扣推荐部分 -->
+    <section id="recommend">
+        <div class="zktj">
+            <span class="pull-left">超值折扣推荐</span>
+            <img class="pull-right" src="http://www.zuyushop.com/wap/images/more.png" alt="">
+        </div>
+            <!-- 折扣推荐内容 -->
+            <div class="content" id='dis'>
+                <ul class="mui-table-view">
+                    <li class="mui-table-view-cell mui-media">
+                        <a href="javascript:;">
+                        <img class="mui-media-object mui-pull-left" src="http://wnzk-img.zuyushop.com/r_img/img/20180912/17/c2ac81a62bf541c9aa11b04df5e2bea2.jpg">
+                        <div class="mui-media-body">
+                            <div class="product-name">
+                                <p>鹤王 山东即食阿胶固元糕520g <span>39元包邮（券后）</span></p>
+                            </div>
+                            <div class="product-info mui-clearfix">
+                                <span class="mui-pull-left">天猫旗舰店 | 09-27 16:29</span>
+                                <span class="mui-pull-right">
+                                <i class="iconfont icon-xiaoxi"></i>0</span>
+                            </div>
+                        </div>
+                    </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 更多优惠 -->
+            <div class="more_bar">
+                <a href="03-save.html">更多优惠信息 »</a>
+            </div>
+    </section>
+    <!-- 尾部登录注册部分 -->
+    <footer id="footer">
+        <div class="jxhd">
+            <span>品牌排行</span>
+            <img class="img" src="http://www.zuyushop.com/wap/images/more.png" alt="">
+        </div>
+            <div class="container-fluid">
+                <div class="mui-row">
+                    <div class="mui-col-xs-4">
+                        <a href="./01-indexlogin.html">登录</a>
+                    </div>
+                    <div class="mui-col-xs-4">
+                        <a href="./01-indexRegister.html">注册</a>
+                    </div>
+                    <div class="mui-col-xs-4">
+                        <a href="#" id='top'>
+                        <img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">
+                        <span>返回顶部</span>
+                    </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <p>
+                    <a class="app" href="http://android.myapp.com/myapp/detail.htm?apkName=com.manmanbuy.bijia&ADTAG=mobile">手机APP下载</a>
+                    <a href="#">慢慢买手机版</a> -- 掌上比价平台
+                </p>
+                <p>
+                    m.manmanbuy.com
+                </p>
+            </div>
+    </footer>
+    <!-- 引入模板引擎 -->
+    <script src="lib/artTemplate/template-web.js"></script>
+    <script src="lib/mui/js/mui.js"></script>
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <script src='./js/01-index.js'></script>
+    <script src="js/base.js"></script>
+    <!-- 准备首页菜单栏模板 -->
+    <script type='text/html' id='indexNavtpl'>
+        {{each result value index}} {{if index
+        <7}} <div class="mui-col-xs-3" id={{"nav"+index}}>
+            <a href="#">
+                {{@value.img}}
+                <p>{{value.name}}</p>
+            </a>
+            </div>
+            {{else if index==7}}
+            <div class="mui-col-xs-3" id='more'>
+                <a href="#">
+                {{@value.img}}
+                <p>{{value.name}}</p>
+            </a>
+            </div>
+            {{else if index>=8}}
+            <div class="mui-col-xs-3 more" id={{"nav"+index}} style='display: none'>
+                <a href="#">
+                {{@value.img}}
+                <p>{{value.name}}</p>
+            </a>
+            </div>
+            {{/if}} {{/each}}
+    </script>
+    <!-- 准备超值折扣推荐模板 -->
+    <script type='text/html' id='indexRecommendtpl'>
+        {{each result value }}
+        <li class="mui-table-view-cell mui-media">
+            <a href="03-saveDetails.html#{{value.productId}}">
+                    {{@value.productImgSm.replace('http://cacheimg.manmanbuy.com/r_img/cacheimg.aspx?width=600&amp;imgurl=','')}}
+                        <div class="mui-media-body">
+                            <div class="product-name">
+                                <p>{{value.productName}}<span>{{value.productPinkage}}</span></p>
+                            </div>
+                            <div class="product-info mui-clearfix">
+                                <span class="mui-pull-left">{{value.productFrom}}| {{value.productTime}}</span>
+                                <span class="mui-pull-right">
+                                <i class="iconfont icon-xiaoxi"></i>{{value.productComCount.replace('有','').replace('人评论','')}}</span>
+                            </div>
+                        </div>
+                    </a>
+        </li>
+        {{/each}}
+    </script>
+</body>
+
+</html>

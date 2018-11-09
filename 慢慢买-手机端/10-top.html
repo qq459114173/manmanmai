@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+    <title> 品牌大全--慢慢买</title>
+    <!--添加视口-->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- 引入MUI框架包 -->
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <!-- 引入incon图标 -->
+    <link rel="icon" href="./images/慢.png" type="image/x-icon">
+    <!-- 引入字体库 -->
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+    <!-- 引入swiper文件 -->
+    <link rel="stylesheet" href="lib/swiper/css/swiper.css">
+    <!-- 引入less文件 -->
+    <link rel="stylesheet" href="./less/10-top.css">
+    <script src="./lib/less/less.js"></script>
+</head>
+
+<body>
+     <!-- 头部部分 -->
+    <header id="header">
+        <div class="pull-left">
+            <a href="01-index.html">
+                <img src="./images/header_logo.png" alt="">
+            </a>
+        </div>
+        <div class="pull-right">
+            <a href="http://android.myapp.com/myapp/detail.htm?apkName=com.manmanbuy.bijia&ADTAG=mobile" target="_black">
+                <img src="./images/header_app.png" alt="">
+            </a>
+        </div>
+    </header>
+    <!-- 搜索框部分 -->
+    <section id="search">
+        <div class="searchtext pull-left">
+            <input type="text" placeholder="请输入你想比价的商品">
+        </div>
+        <div class="searchbtn pull-right">
+            <input type="button" value="搜索">
+        </div>
+    </section>
+    <main id="main">
+         <!-- 标题部分 -->
+            <section class="title">
+                <ul>
+                    <li><a href="01-index.html">首页 ></a></li>
+                    <li><a href="top10.html">全部分类 ></a></li>
+                    
+                </ul>
+            </section>
+        <section id="top10">
+            <div class="des">热门品牌排行</div>
+            <ul>
+                <li><a href="#"><span>平板电视十大品牌</span><i class="mui-icon mui-icon-arrowdown"></i></a></li>
+                
+            </ul>
+        </section>
+    </main>
+<!-- 尾部登录注册部分 -->
+    <footer id="footer">
+        <div class="container-fluid">
+            <div class="mui-row">
+                <div class="mui-col-xs-4">
+                    <a href="./01-indexlogin.html">登录</a>
+                </div>
+                <div class="mui-col-xs-4">
+                    <a href="./01-indexRegister.html">注册</a>
+                </div>
+                <div class="mui-col-xs-4">
+                    <a href="#" id='top'>
+                        <img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">
+                        <span>返回顶部</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>
+                <a class="app" href="http://android.myapp.com/myapp/detail.htm?apkName=com.manmanbuy.bijia&ADTAG=mobile">手机APP下载</a>
+                <a href="#">慢慢买手机版</a> -- 掌上比价平台
+            </p>
+            <p>
+                m.manmanbuy.com
+            </p>
+        </div>
+    </footer>
+
+        <script type="text/html" id="getbrandtitleTpl">
+            {{each result value}}
+            <li><a href="10-distop.html?brandTitleId={{value.brandTitleId}}"><span>{{value.brandTitle}}</span><i class="mui-icon mui-icon-arrowdown"></i></a></li>
+        {{/each}}
+        </script>
+    <script src="lib/mui/js/mui.js"></script>
+    <script src="lib/zepto/zepto.min.js"></script>
+    <script src="lib/artTemplate/template-web.js"></script>
+    <script src="js/10-top.js"></script>
+    <script src="js/base.js"></script>
+</body>
+
+</html>

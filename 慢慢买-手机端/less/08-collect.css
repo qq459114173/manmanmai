@@ -1,0 +1,161 @@
+@import 'base.css';
+/* 头部部分 */
+ #header {
+     width: 100%;
+     display: flex;
+     text-align: center;
+     z-index: 999;
+     max-width: 7.5rem;
+     height: 0.4rem;
+     background-color: #ff8b00;
+}
+ #header > .return {
+     width: 0.4rem;
+     height: 0.4rem;
+     display: block;
+     font-size: 0.3rem;
+     color: #fff;
+     line-height: 0.4rem;
+     float: left;
+     font-weight: normal;
+}
+ #header > h4 {
+     flex: 1;
+     color: #fff;
+     line-height: 0.4rem;
+     font-weight: normal;
+}
+ #header > img {
+     margin-top: 0.05rem;
+     margin-right: 0.1rem;
+     width: 0.3rem;
+     height: 0.3rem;
+     float: right;
+}
+/* 主体区域 */
+ #main #search {
+     padding: 0;
+     height: 0.38rem;
+     display: normal;
+}
+ #main #search .filter {
+     width: 90%;
+     border-bottom: 0;
+     box-sizing: border-box;
+}
+ #main #search .filter > ul {
+     width: 100%;
+     display: flex;
+     border-right: 0.01rem solid #e6e6e6;
+     border-bottom: 0;
+}
+ #main #search .filter > ul li {
+     float: left;
+     width: 33.3%;
+     border-bottom: 0;
+     text-align: center;
+}
+ #main #search .filter > ul li:nth-child(2) select {
+     margin-left: -0.2rem;
+}
+ #main #search .filter > ul li:nth-child(2) i {
+     right: -0.18rem;
+}
+ #main #search .filter > ul li:nth-of-type(1) select {
+     margin-left: -0.2rem;
+}
+ #main #search .filter > ul li:nth-of-type(1) i {
+     right: 0.28rem;
+}
+ #main #search .filter > ul li:nth-of-type(3) i {
+     right: 0.1rem;
+}
+ #main #search .filter > ul li #region {
+     padding: 0;
+}
+ #main #search .filter > ul li > a {
+     display: block;
+     width: 100%;
+     text-align: center;
+     position: relative;
+}
+ #main #search .filter > ul li > a select {
+     width: auto;
+     padding: 0 2%;
+     margin: 0;
+     height: 0.38rem;
+}
+ #main #search .filter > ul li > a select option {
+     text-align: center;
+}
+ #main #search .filter > ul li > a > i {
+     position: absolute;
+     top: 0.1rem;
+}
+ #main #search .search {
+     width: 0.45rem;
+     text-align: center;
+     color: #8c8c8c;
+     height: 0.38rem;
+     line-height: 0.38rem;
+}
+/* 主体内容部分 */
+ #main #section {
+     overflow: hidden;
+     background-color: #f1f1f1;
+     padding: 0.1rem 0.05rem;
+}
+ #main #section > ul > li {
+     float: left;
+     width: 50%;
+}
+ #main #section > ul > li a {
+     display: block;
+     margin: 0.05rem;
+     background-color: #fff;
+}
+ #main #section > ul > li a > .pic {
+     width: 100%;
+     height: auto;
+     text-align: center;
+     overflow: hidden;
+}
+ #main #section > ul > li a > .pic > img {
+     width: 1.73rem;
+     height: 1.73rem;
+}
+ #main #section > ul > li a > .title {
+     color: #333333;
+     word-break: break-all;
+     padding: 0 0.06rem;
+     white-space: nowrap;
+     text-overflow: ellipsis;
+     overflow: hidden;
+     font-size: 0.12rem;
+     font-weight: normal;
+     text-align: left;
+     margin-top: 0.06rem;
+     margin-bottom: 0.06rem;
+}
+ #main #section > ul > li a .other {
+     padding: 0.06rem;
+     overflow: hidden;
+}
+ #main #section > ul > li a .other > .price {
+     float: left;
+     color: #f8601d;
+     font-size: 0.2rem;
+}
+ #main #section > ul > li a .other > .price > em {
+     font-style: normal;
+     font-size: 0.12rem;
+}
+ #main #section > ul > li a .other > .btn {
+     float: right;
+     font-size: 0.14rem;
+     color: #fff;
+     border-radius: 0.03rem;
+     background-color: #ff9501;
+     padding: 0.04rem 0.1rem;
+}
+ 

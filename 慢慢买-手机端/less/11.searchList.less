@@ -1,0 +1,76 @@
+@import 'base.css';
+/* 头部部分 */
+ #header {
+     width: 100%;
+     display: flex;
+     text-align: center;
+     z-index: 999;
+     max-width: 7.5rem;
+     height: 0.4rem;
+}
+ #header > .return {
+     width: 0.4rem;
+     height: 0.4rem;
+     display: block;
+     font-size: 0.3rem;
+     color: #fff;
+     line-height: 0.4rem;
+     float: left;
+     font-weight: normal;
+}
+ #header > h4 {
+     flex: 1;
+     color: #fff;
+     line-height: 0.4rem;
+     font-weight: normal;
+}
+ #header > img {
+     margin-top: 0.05rem;
+     margin-right: 0.1rem;
+     width: 0.3rem;
+     height: 0.3rem;
+     float: right;
+}
+#search{
+	border:0;
+	margin-bottom:10px;
+}
+/* 主体区域 */
+#main{
+	margin-bottom:100px;
+	.search-history{
+		padding:0 10px;
+		.title{
+			font-size:14px;
+			line-height: 30px;
+		}
+		.content{
+			ul{
+				border:1px solid #ccc;
+				border-radius:6px;
+				
+				li{
+					line-height: 40px;
+					height: 40px;
+					padding-left: 10px;
+					border-bottom: 1px solid #ccc;
+					position:relative;
+					p{
+					font-size:14px;
+					color:#8f8f94;
+				}
+					a{
+						display: block;
+						font-size:14px;
+					}
+					i{
+						position: absolute;
+						top:12px;
+						right:10px;
+						font-size:14px;
+					}
+				}
+			}
+		}
+	}
+}

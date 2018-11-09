@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>产品分类-慢慢买比价网</title>
+    <!--添加视口-->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- 引入MUI框架包 -->
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <!-- 引入incon图标 -->
+    <link rel="icon" href="./images/慢.png" type="image/x-icon">
+    <!-- 引入字体库 -->
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+    <!-- 引入less文件 -->
+    <link rel="stylesheet" href="./less/compareSearch.css">
+    <script src="./lib/less/less.js"></script>
+    <script src="js/rem.js"></script>
+    
+</head>
+
+<body>
+    <!-- 头部部分 -->
+    <header id="header">
+        <div class="pull-left">
+            <a href="01-index.html">
+                <img src="./images/header_logo.png" alt="">
+            </a>
+        </div>
+        <div class="pull-right">
+            <a href="http://android.myapp.com/myapp/detail.htm?apkName=com.manmanbuy.bijia&ADTAG=mobile" target="_black">
+                <img src="./images/header_app.png" alt="">
+            </a>
+        </div>
+    </header>
+    <!-- 搜索框部分 -->
+    <section id="search">
+        <div class="searchtext pull-left">
+            <input type="text" placeholder="请输入你想比价的商品">
+        </div>
+        <div class="searchbtn pull-right">
+            <input type="button" value="搜索">
+        </div>
+    </section>
+    <!-- 主体区域 -->
+    <main id="main">
+        <!-- 主体内容 -->
+        <section id="section">
+            <div class="title">
+                <a href="#">大家电
+                    <i class="fa fa-arrow-down"></i>
+                </a>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>
+                        <a href="#"></a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <!-- 尾部登录注册部分 -->
+    <footer id="footer">
+        <div class="container-fluid">
+            <div class="mui-row">
+                <div class="mui-col-xs-4">
+                    <a href="./01-indexlogin.html">登录</a>
+                </div>
+                <div class="mui-col-xs-4">
+                    <a href="./01-indexRegister.html">注册</a>
+                </div>
+                <div class="mui-col-xs-4">
+                    <a href="#" id='top'>
+                        <img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">
+                        <span>返回顶部</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>
+                <a class="app" href="http://android.myapp.com/myapp/detail.htm?apkName=com.manmanbuy.bijia&ADTAG=mobile">手机APP下载</a>
+                <a href="#">慢慢买手机版</a> -- 掌上比价平台
+            </p>
+            <p>
+                m.manmanbuy.com
+            </p>
+        </div>
+    </footer>
+    <!-- 引入模板引擎 -->
+    <script src="lib/artTemplate/template-web.js"></script>
+    <script src="lib/mui/js/mui.js"></script>
+    <!--引入zeptojs文件 -->
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <script src="./js/02-compareSearch.js"></script>
+    <!-- 准备分页标题模板 -->
+    <script type='text/html' id='comparetpl'>
+        {{each result value index}}
+        <div class="title">
+            <a href="#">
+                    {{value.title}}
+                    <i class="fa fa-arrow-down"></i>
+                </a>
+        </div>
+        {{if(value.titleId==0)}}
+        <div class="content" id='content{{value.titleId}}' style='display: block'>
+            {{else}}
+            <div class="content" id='content{{value.titleId}}' style='display: none'>
+            {{/if}}
+            <ul>
+                <li>
+                    <a href="#">家庭影院1</a>
+                </li>
+                <li>
+                    <a href="#">家庭影院2</a>
+                </li>
+                <li>
+                    <a href="#">家庭影院3</a>
+                </li>
+            </ul>
+        </div>
+        {{/each}}
+    </script>
+    <!-- 准备分类列表内容模板 -->
+    <script type='text/html' id='contenttpl'>
+        {{each result value index}}
+        <li id='{{value.categoryId}}'>
+            <a href="#">{{value.category}}</a>
+        </li>
+        {{/each}}
+    </script>
+</body>
+
+</html>

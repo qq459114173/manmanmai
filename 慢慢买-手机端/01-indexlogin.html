@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> 慢慢买比价网--手机版</title>
+    <!--添加视口-->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- 引入MUI框架包 -->
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <!-- 引入incon图标 -->
+    <link rel="icon" href="./images/慢.png" type="image/x-icon">
+    <!-- 引入字体库 -->
+    <link rel="stylesheet" href="./font/font_u9sb87clzak/iconfont.css">
+    <!-- <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css"> -->
+    <!-- 引入less文件 -->
+    <link rel="stylesheet" href="./less/indexLogin.css">
+    <script src="./lib/less/less.js"></script>
+    <script src="js/rem.js"></script>
+</head>
+
+<body>
+    <!-- 头部部分 -->
+    <header id="header">
+        <div class="pull-left">
+            <a href="01-index.html">
+                <img src="./images/header_logo.png" alt="">
+            </a>
+        </div>
+        <div class="pull-right">
+            <a href="http://android.myapp.com/myapp/detail.htm?apkName=com.manmanbuy.bijia&ADTAG=mobile" target="_black">
+                <img src="./images/header_app.png" alt="">
+            </a>
+        </div>
+    </header>
+    <!-- 搜索框部分 -->
+    <section id="search">
+        <div class="searchtext pull-left">
+            <input type="text" placeholder="请输入你想比价的商品">
+        </div>
+        <div class="searchbtn pull-right">
+            <input type="button" value="搜索">
+        </div>
+    </section>
+    <!-- 登录部分 -->
+    <section id="login">
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label"></label>
+                <div class="col-sm-12">
+                    <input type="email" class="form-control" id="inputEmail3" placeholder="请输入用户名/手机号">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label"></label>
+                <div class="col-sm-12">
+                    <input type="password" class="form-control" id="inputPassword3" placeholder="请输入密码">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-12">
+                    <button type="submit" class="btn btn-default">登录</button>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-12">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" checked="checked">一个月内自动登录
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div id="find">
+            <p>忘记密码：请电脑登录www.manmanbuy.com找回</p>
+        </div>
+    </section>
+    <!-- 尾部登录注册部分 -->
+    <footer id="footer">
+        <div class="container-fluid">
+            <div class="mui-row">
+                <div class="mui-col-xs-4">
+                    <a href="./01-indexlogin.html">登录</a>
+                </div>
+                <div class="mui-col-xs-4">
+                    <a href="./01-indexRegister.html">注册</a>
+                </div>
+                <div class="mui-col-xs-4">
+                    <a href="#" id='top'>
+                        <img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">
+                        <span>返回顶部</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>
+                <a class="app" href="http://android.myapp.com/myapp/detail.htm?apkName=com.manmanbuy.bijia&ADTAG=mobile">手机APP下载</a>
+                <a href="#">慢慢买手机版</a> -- 掌上比价平台
+            </p>
+            <p>
+                m.manmanbuy.com
+            </p>
+        </div>
+    </footer>
+    <!-- 引入模板引擎 -->
+    <script src="lib/artTemplate/template-web.js"></script>
+    <script src="lib/mui/js/mui.js"></script>
+    <script src="./lib/zepto/zepto.min.js"></script>
+</body>
+
+</html>

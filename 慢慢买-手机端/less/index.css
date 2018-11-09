@@ -1,0 +1,100 @@
+/* 引入公共样式 */
+ @import 'base.css';
+/* 导航菜单栏部分 */
+ #nav {
+     padding: 0.15rem 0;
+     background-color: #fff;
+}
+ #nav > .container > .mui-row > div {
+     margin-top: 0.1rem;
+     text-align: center;
+}
+ #nav > .container > .mui-row > div img {
+     width: 0.5rem;
+}
+ #nav > .container > .mui-row > div p {
+     color: #5a5a5a;
+     font-size: 0.14rem;
+     margin-top: 0.1rem;
+}
+ #nav > .container > .mui-row .more {
+     display: none;
+}
+ #recommend .zktj {
+     height: 0.35rem;
+     background-color: #ff9000;
+     background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffaf47), to(#ff9000));
+     line-height: 0.35rem;
+}
+ #recommend .zktj > span {
+     color: #fff;
+     font-size: 0.18rem;
+     font-weight: 700;
+     margin-left: 0.1rem;
+}
+ #recommend .zktj > img {
+     width: 0.2rem;
+     color: #fff;
+     margin-right: 0.1rem;
+     margin-top: 0.08rem;
+     float: right;
+}
+ #recommend #dis {
+     max-width: 9.6rem;
+}
+ #recommend #dis > ul > li {
+     border-bottom: 0.01rem solid #e6e6e6;
+}
+ #recommend #dis > ul > li > a {
+     padding: 0.14rem 0.08rem;
+     display: flex;
+}
+ #recommend #dis > ul > li > a > img {
+     width: 1.1rem;
+     max-width: 1.1rem;
+     height: 1.1rem;
+}
+ #recommend #dis > ul > li > a .mui-media-body {
+     flex: 1;
+}
+ #recommend #dis > ul > li > a .product-name > p {
+     white-space: normal;
+     line-height: 0.25rem;
+     font-size: 0.16rem;
+}
+ #recommend #dis > ul > li > a .product-name > p > span {
+     color: #ff6c00;
+}
+ #recommend #dis > ul > li > a .product-info {
+     font-size: 0.12rem;
+     line-height: 0.4rem;
+     color: #a1a1a1;
+}
+ #recommend #dis > ul > li > a .product-info > span {
+     font-size: 0.12rem;
+     color: #a1a1a1;
+     line-height: 0.4rem;
+     vertical-align: middle;
+}
+ #recommend #dis > ul > li > a .product-info > span > i {
+     width: 0.15rem;
+     height: 0.15rem;
+     margin-right: 0.05rem;
+     margin-top: 0.05rem;
+}
+ #recommend > .more_bar {
+     text-align: center;
+     width: 100%;
+}
+ #recommend > .more_bar > a {
+     display: block;
+     background: #F4F4F4;
+     background-image: linear-gradient(#ffffff, #f4f4f4);
+     line-height: 0.3rem;
+     font-size: 0.14rem;
+     border: 1px solid #dddddd;
+     margin: 0.1rem;
+     border-radius: 0.05rem;
+     color: #5a5a5a;
+}
+ 

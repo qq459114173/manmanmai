@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>白菜价-慢慢买</title>
+    <!--添加视口-->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- 引入MUI框架包 -->
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <!-- 引入incon图标 -->
+    <link rel="icon" href="./images/慢.png" type="image/x-icon">
+    <!-- 引入字体库 -->
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+    <!-- <link rel="stylesheet" href="./font/font_u9sb87clzak/iconfont.css"> -->
+    <!-- 引入swiper文件 -->
+    <link rel="stylesheet" href="lib/swiper/css/swiper.css">
+    <!-- 引入less文件 -->
+    <link rel="stylesheet" href="./less/05-lowPrice.css">
+    <script src="./lib/less/less.js"></script>
+    <script src="js/rem.js"></script>
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <a href="01-index.html" class="return fa fa-angle-left">
+        </a>
+        <h4>白菜价-淘宝内部劵</h4>
+        <img src="./images/header_app.png" alt="">
+    </header>
+        <!-- 导航区域 -->
+        <nav id="nav" class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <ul>
+                        <li class="active"><a href="#">全部</a></li>
+                        <li><a href="#">热销</a></li>
+                        <li><a href="#">9块邮</a></li>
+                        <li><a href="#">19块邮</a></li>
+                        <li><a href="#">数码家电</a></li>
+                        <li><a href="#">居家</a></li>
+                        <li><a href="#">9块9包邮</a></li>
+                        <li><a href="#">9块9包邮</a></li>
+                        <li><a href="#">9块9包邮</a></li>
+                        <li><a href="#">9块9包邮</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- 主体区域 -->
+        <main id="main">
+            <!-- 主体内容部分 -->
+            <section id='section'>
+                <ul class="mui-table-view">
+                    <li class="mui-table-view-cell mui-media">
+                        <img class="mui-media-object mui-pull-left" src="https://gd2.alicdn.com/imgextra/i2/2551982558/TB2H6XhamiJ.eBjSspiXXbqAFXa_!!2551982558.jpg_400x400.jpg">
+                        <div class="mui-media-body">
+                            <div class="product-name">
+                                <p><span class="b">[包邮]</span>双十一红包 今日开启</p>
+                            </div>
+                            <div class="money">
+                                <em>¥</em>0.0
+                                <del>¥0</del>
+                            </div>
+                            <div class="bar clearfix">
+                                <a href="http://shop.m.taobao.com/shop/coupon.htm?activityId=27a14c9fc6bb4a48b917d567fcf8f664&amp;sellerId=2246833798" class="goquan" target="_blank"></a>
+                                <i><em style="width:1%"></em><span>1%</span></i><b>已领82张</b>
+                            </div>
+                            <!-- 优惠券部分 -->
+                            <div class="discounts">
+                                <div class="left"><a href="#">点此领15优惠券</a></div>
+                                <div class="right"><a href="#">下单链接</a></div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </main>
+        <!-- 尾部登录注册部分 -->
+        <footer id="footer">
+            <div class="container-fluid">
+                <div class="mui-row">
+                    <div class="mui-col-xs-4">
+                        <a href="./01-indexlogin.html">登录</a>
+                    </div>
+                    <div class="mui-col-xs-4">
+                        <a href="./01-indexRegister.html">注册</a>
+                    </div>
+                    <div class="mui-col-xs-4">
+                        <a href="#" id='top'>
+                        <img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">
+                        <span>返回顶部</span>
+                    </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <p>
+                    <a class="app" href="http://android.myapp.com/myapp/detail.htm?apkName=com.manmanbuy.bijia&ADTAG=mobile">手机APP下载</a>
+                    <a href="#">慢慢买手机版</a> -- 掌上比价平台
+                </p>
+                <p>
+                    m.manmanbuy.com
+                </p>
+            </div>
+        </footer>
+        <!-- 引入模板引擎 -->
+        <script src="lib/artTemplate/template-web.js"></script>
+        <script src="lib/mui/js/mui.js"></script>
+        <!--引入zeptojs文件 -->
+        <script src="./lib/zepto/zepto.min.js"></script>
+        <script src="./lib/zepto/zepto.picLazyLoad.js"></script>
+        <script src="./js/05.lowPrice.js"></script>
+        <script src="lib/swiper/js/swiper.js"></script>
+        <script src="js/base.js"></script>
+        <!-- 准备白菜价标题模板 -->
+        <script type='text/html' id='lowPriceTpl'>
+            {{each result value index}} {{if(index==0)}}
+        <li class="active"><a href="#" id="{{value.titleId}}">{{value.title}}</a></li>
+        {{else}}
+        <li><a href="#" id="{{value.titleId}}">{{value.title}}</a></li>
+        {{/if}} {{/each}}
+    </script>
+        <!-- 准备白菜价商品列表模板 -->
+        <script type='text/html' id='lowPriceTpl2'>
+            {{each result value}}
+        <li class="mui-table-view-cell mui-media">
+                    {{@value.productImg}}
+                    <div class="mui-media-body">
+                        <div class="product-name">
+                            <p>{{@value.productName}}</p>
+                        </div>
+                        <div class="money">
+                            {{@value.productPrice}}
+                        </div>
+                       {{@value.productCouponRemain}}
+                        <!-- 优惠券部分 -->
+                        <div class="discounts">
+                            <div class="left"><a href="#">点此领15优惠券</a></div>
+                            <div class="right"><a href="#">下单链接</a></div>
+                        </div>
+                    </div>
+                </li>
+        {{/each}}
+    </script>
+</body>
+
+</html>

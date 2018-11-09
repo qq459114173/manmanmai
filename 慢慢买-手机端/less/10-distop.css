@@ -1,0 +1,156 @@
+@import 'base.css';
+ #main > .title {
+     height: 0.41rem;
+     background: #efefef;
+     background-image: linear-gradient(#ffffff, #efefef);
+     border-radius: 0.05rem;
+     border: 1px solid #dddddd;
+     line-height: 0.4rem;
+     font-weight: bold;
+     font-size: 0.14rem;
+     padding: 0 0.05rem;
+}
+ #main > .title > ul > li {
+     float: left;
+}
+ #main #brandTop10 > .title {
+     background-color: #f3f3f3;
+     font-size: 0.14rem;
+}
+ #main #brandTop10 > .title a {
+     line-height: 0.36rem;
+     color: #8b5427;
+     padding-left: 0.1rem;
+     font-weight: 700;
+}
+ #main #brandTop10 ul li a > i {
+     display: block;
+     width: 0.2rem;
+     height: 0.2rem;
+     color: white;
+     line-height: 0.22rem;
+     text-align: center;
+     font-style: normal;
+     background-color: #c9c9c9;
+}
+ #main #brandTop10 ul li a > span {
+     color: #aebbbb;
+     font-size: 0.3rem;
+     font-weight: normal;
+}
+ #main #brandTop10 ul li a > div {
+     font-size: 0.16rem;
+}
+ #main #brandTop10 ul li a > div > p {
+     font-size: 0.12rem;
+}
+ #main #brandTop10 ul li:first-child a > i {
+     background-color: #f10e0e;
+}
+ #main #brandTop10 ul li:nth-child(2) a > i {
+     background-color: #ff9314;
+}
+ #main #brandTop10 ul li:nth-child(3) a > i {
+     background-color: #8adf5b;
+}
+ #main #saleTop10 > div {
+     background-color: #f3f3f3;
+     font-size: 0.14rem;
+}
+ #main #saleTop10 > div > a {
+     line-height: 0.36rem;
+     color: #8b5427;
+     padding-left: 0.1rem;
+     font-weight: 700;
+}
+ #main #saleTop10 ul li {
+     height: 1.21rem;
+}
+ #main #saleTop10 ul li a img {
+     width: 1rem;
+     height: 1rem;
+     float: left;
+}
+ #main #saleTop10 ul li a div {
+     padding-left: 0.1rem;
+     white-space: normal;
+     line-height: 0.2rem;
+}
+ #main #saleTop10 ul li a div p {
+     margin-top: 0.05rem;
+}
+ #main #saleTop10 ul li a div p.price {
+     font-size: 0.18rem;
+     color: #ea3900;
+}
+ #main #saleTop10 ul li a div p.price span {
+     font-size: 0.22rem;
+     float: right;
+     color: #ff9000;
+}
+ #main #saleTop10 ul li a div p.info {
+     font-size: 0.12rem;
+     line-height: 0.24rem;
+}
+ #main #commentTop10 > div {
+     background-color: #f3f3f3;
+     font-size: 0.14rem;
+}
+ #main #commentTop10 > div > a {
+     line-height: 0.36rem;
+     color: #8b5427;
+     padding-left: 0.1rem;
+     font-weight: 700;
+}
+ #main #commentTop10 > ul > li {
+     height: 1.21rem;
+     background-color: #fff;
+     height: auto;
+}
+ #main #commentTop10 > ul > li > a {
+     margin-bottom: 0.1rem;
+}
+ #main #commentTop10 > ul > li > a > img {
+     width: 1rem;
+     height: 1rem;
+}
+ #main #commentTop10 > ul > li > a > div {
+     padding-left: 0.1rem;
+     white-space: normal;
+     color: #999;
+     font-size: 0.14rem;
+}
+ #main #commentTop10 > ul > li .comment {
+     background-color: #f8f8f8;
+     border: solid 1px #ccc;
+     padding: 0.1rem;
+     line-height: 0.22rem;
+}
+ #main #commentTop10 > ul > li .comment > p > i {
+     font-style: normal;
+     color: #ff8f00;
+     font-size: 0.2rem;
+}
+ #main #commentTop10 > ul > li .comment > p > span {
+     float: right;
+}
+ #main #commentTop10 > ul > li .comment > p.content {
+     color: black;
+     position: relative;
+}
+ #main #commentTop10 > ul > li .comment > p.content::before {
+     content: '';
+     width: 0;
+     height: 0;
+     position: absolute;
+     left: 0.29rem;
+     top: -0.4rem;
+     border-bottom: 0.08rem solid #e7e7e7;
+     border-left: 0.08rem solid transparent;
+     border-right: 0.08rem solid transparent;
+}
+ #main > a {
+     font-size: 0.16rem;
+     color: #5a5a5a;
+}
+ 

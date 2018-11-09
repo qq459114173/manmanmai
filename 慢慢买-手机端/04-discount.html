@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>省钱快曝-慢慢买</title>
+    <!--添加视口-->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- 引入MUI框架包 -->
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <!-- 引入incon图标 -->
+    <link rel="icon" href="./images/慢.png" type="image/x-icon">
+    <!-- 引入字体库 -->
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet" href="./font/font_u9sb87clzak/iconfont.css">
+    <!-- 引入less文件 -->
+    <link rel="stylesheet" href="./less/04-discount.css">
+    <script src="./lib/less/less.js"></script>
+    <script src="js/rem.js"></script>
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <a href="01-index.html" class="return fa fa-angle-left">
+        </a>
+        <h4>国内折扣</h4>
+        <img src="./images/header_app.png" alt="">
+    </header>
+        <!-- 主体区域 -->
+        <main id="main">
+            <section id='section'>
+                <!-- 主体内容部分 -->
+                <ul class="scroll_y">
+                    <li class="border-img">
+                        <a href="#" title="五先生  智能门锁 指纹锁防盗门密码锁智能锁防盗门锁 家用电子密码锁 A3全自动半导体识别款 红古铜色 包安装 1088">
+                        <div class="img"> <img src="http://apapia.manmanbuy.com/r_img/cacheimg2/http__img11.360buyimg.com_n7_jfs_t22546_56_1090092485_362144_aee0bacd_5b50abc1Nac711ad6.jpg"></div>
+                        <div class="title">五先生 智能门锁 指纹锁防盗门密码锁智能锁防盗门锁 家用电子密码锁 A3全自动半导体识别款 红古铜色 包安装</div>
+                        <div class="subtit">1088</div>
+                        <div class="info">
+                            <div class="mall">京东商城 | 2018/10/3 10:26</div>
+                        </div>
+                    </a>
+                    </li>
+                </ul>
+            </section>
+        </main>
+        <!-- 尾部登录注册部分 -->
+        <footer id="footer">
+            <div class="container-fluid">
+                <div class="mui-row">
+                    <div class="mui-col-xs-4">
+                        <a href="./01-indexlogin.html">登录</a>
+                    </div>
+                    <div class="mui-col-xs-4">
+                        <a href="./01-indexRegister.html">注册</a>
+                    </div>
+                    <div class="mui-col-xs-4">
+                        <a href="#" id='top'>
+                        <img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">
+                        <span>返回顶部</span>
+                    </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <p>
+                    <a class="app" href="http://android.myapp.com/myapp/detail.htm?apkName=com.manmanbuy.bijia&ADTAG=mobile">手机APP下载</a>
+                    <a href="#">慢慢买手机版</a> -- 掌上比价平台
+                </p>
+                <p>
+                    m.manmanbuy.com
+                </p>
+            </div>
+        </footer>
+        <!-- 引入模板引擎 -->
+        <script src="lib/artTemplate/template-web.js"></script>
+        <script src="lib/mui/js/mui.js"></script>
+        <!--引入zeptojs文件 -->
+        <script src="./lib/zepto/zepto.min.js"></script>
+        <script src="./lib/zepto/zepto.picLazyLoad.js"></script>
+        <script src="js/04-duscount.js"></script>
+        <script src="lib/zepto/echo.js"></script>
+        <script src="js/base.js"></script>
+        <!-- 准备商品列表模板 -->
+        <script type='text/html' id='discountTpl'>
+            {{each result value index}}
+        <li class="border-img pic_box">
+            <a href="#" id='{{value.productId}}'>
+                <div class="img">
+                    {{if index
+                    <=15}} <img src="{{value.productImg.split('"')[1]}}" alt="">
+                        {{else}}
+                        <img class="lazy" src="images/timg.gif" data-echo="{{value.productImg.split('"')[1]}}">
+                        {{/if}}
+                </div>
+                <div class="title">{{value.productName}}</div>
+                <div class="subtit">{{value.productPrice}}</div>
+                <div class="info">
+                    <div class="mall">{{value.productFrom}} | {{value.productTime}}</div>
+                </div>
+            </a>
+        </li>
+        {{/each}}
+    </script>
+</body>
+
+</html>

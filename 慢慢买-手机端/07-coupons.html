@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>优惠券-慢慢买</title>
+    <!--添加视口-->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- 引入MUI框架包 -->
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <!-- 引入incon图标 -->
+    <link rel="icon" href="./images/慢.png" type="image/x-icon">
+    <!-- 引入字体库 -->
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+    <!-- <link rel="stylesheet" href="./font/font_u9sb87clzak/iconfont.css"> -->
+    <!-- 引入less文件 -->
+    <link rel="stylesheet" href="./less/07-coupons.css">
+    <script src="./lib/less/less.js"></script>
+    <script src="js/rem.js"></script>
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <a href="01-index.html" class="return fa fa-angle-left">
+        </a>
+        <h4>优惠券</h4>
+        <img src="./images/header_app.png" alt="">
+    </header>
+        <!-- 主体区域 -->
+        <main id="main">
+            <section id='section'>
+                <!-- 主体内容部分 -->
+                <ul>
+                    <li>
+                        <a href="#">
+                        <img src="./images/ic_bcj.png" alt="">
+                        <span>肯德基</span>
+                    </a>
+                    </li>
+                </ul>
+            </section>
+            <!-- 标题部分 -->
+            <section class="title">
+                <ul>
+                    <li><a href="01-index.html">首页 ></a></li>
+                    <li><a href="07-coupons.html">优惠券</a></li>
+                </ul>
+            </section>
+        </main>
+        <!-- 尾部登录注册部分 -->
+        <footer id="footer">
+            <div class="container-fluid">
+                <div class="mui-row">
+                    <div class="mui-col-xs-4">
+                        <a href="./01-indexlogin.html">登录</a>
+                    </div>
+                    <div class="mui-col-xs-4">
+                        <a href="./01-indexRegister.html">注册</a>
+                    </div>
+                    <div class="mui-col-xs-4">
+                        <a href="#" id='top'>
+                        <img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">
+                        <span>返回顶部</span>
+                    </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <p>
+                    <a class="app" href="http://android.myapp.com/myapp/detail.htm?apkName=com.manmanbuy.bijia&ADTAG=mobile">手机APP下载</a>
+                    <a href="#">慢慢买手机版</a> -- 掌上比价平台
+                </p>
+                <p>
+                    m.manmanbuy.com
+                </p>
+            </div>
+        </footer>
+        <!-- 引入模板引擎 -->
+        <script src="lib/artTemplate/template-web.js"></script>
+        <script src="lib/mui/js/mui.js"></script>
+        <!--引入zeptojs文件 -->
+        <script src="./lib/zepto/zepto.min.js"></script>
+        <script src="./lib/zepto/zepto.picLazyLoad.js"></script>
+        <script src="js/07-coupons.js"></script>
+        <!-- 准备优惠券模板 -->
+        <script type='text/html' id='couponsTpl'>
+            {{each result value}}
+        <li>
+            <a href="07-{{value.couponLink}}?couponId={{value.couponId}}">
+                <img src="{{value.couponImg}}" alt="">
+                <span>{{value.couponTitle}}</span>
+            </a>
+        </li>
+        {{/each}}
+    </script>
+</body>
+
+</html>

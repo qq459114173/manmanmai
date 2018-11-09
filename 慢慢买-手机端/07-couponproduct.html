@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>肯德基优惠券-慢慢买</title>
+    <!--添加视口-->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- 引入MUI框架包 -->
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <!-- 引入incon图标 -->
+    <link rel="icon" href="./images/慢.png" type="image/x-icon">
+    <!-- 引入字体库 -->
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+    <!-- <link rel="stylesheet" href="./font/font_u9sb87clzak/iconfont.css"> -->
+    <!-- 引入less文件 -->
+    <link rel="stylesheet" href="./less/07-coiponproduct.css">
+    <script src="./lib/less/less.js"></script>
+    <script src="js/rem.js"></script>
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <a href="07-coupons.html" class="return fa fa-angle-left">
+        </a>
+        <h4>肯德基优惠券</h4>
+        <img src="./images/header_app.png" alt="">
+    </header>
+        <!-- 主体区域 -->
+        <main id="main">
+            <section id='section'>
+                <!-- 小标题部分 -->
+                <h4>--点餐前出示手机中的优惠券，即可享受优惠--</h4>
+                <!-- 主体内容部分 -->
+                <ul class="mui-table-view">
+                    <li class="mui-table-view-cell mui-media ">
+                        <a href="javascript:;">
+                        <img class="mui-media-object mui-pull-left" src="http://d3.5ikfc.com/static/thumbs/1016/kfc-5ikfc-108_pc27.jpg">
+                        <div class="mui-media-body">
+                            <div class="product-name">
+                                <p>C27 两人小食组 新奥尔良烤翅2块+薯条(中)+黄金鸡块5块+劲爆鸡米花(小) 2016年10月凭肯德基优惠券</p>
+                            </div>
+                            <div class="money">
+                                <p>￥ 28</p>
+                                <i class="fa fa-angle-right"></i>
+                            </div>
+                            <div class="product-info mui-clearfix">
+                                <span>有效期至10月31日</span>
+                            </div>
+                        </div>
+                    </a>
+                    </li>
+                </ul>
+            </section>
+        </main>
+        <!-- 尾部登录注册部分 -->
+        <footer id="footer">
+            <div class="container-fluid">
+                <div class="mui-row">
+                    <div class="mui-col-xs-4">
+                        <a href="./01-indexlogin.html">登录</a>
+                    </div>
+                    <div class="mui-col-xs-4">
+                        <a href="./01-indexRegister.html">注册</a>
+                    </div>
+                    <div class="mui-col-xs-4">
+                        <a href="#" id='top'>
+                        <img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">
+                        <span>返回顶部</span>
+                    </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <p>
+                    <a class="app" href="http://android.myapp.com/myapp/detail.htm?apkName=com.manmanbuy.bijia&ADTAG=mobile">手机APP下载</a>
+                    <a href="#">慢慢买手机版</a> -- 掌上比价平台
+                </p>
+                <p>
+                    m.manmanbuy.com
+                </p>
+            </div>
+        </footer>
+        <!-- 遮罩层部分 -->
+        <div class="mui-backdrop" style="display:none">
+            <div class="mui-slider">
+                <span id="left" class="fa fa-angle-left"></span>
+                <div class="mui-slider-group">
+                    <div class="mui-slider-item">
+                        <a href="#"><img src="http://d3.5ikfc.com/static/thumbs/1016/kfc-5ikfc-108_pc27.jpg" /></a>
+                    </div>
+                    <div class="mui-slider-item">
+                        <a href="#"><img src="http://d3.5ikfc.com/static/thumbs/1016/kfc-5ikfc-108_pc28.jpg" /></a>
+                    </div>
+                    <div class="mui-slider-item">
+                        <a href="#"><img src="http://d3.5ikfc.com/static/thumbs/1016/kfc-5ikfc-108_pc15.jpg" /></a>
+                    </div>
+                    <div class="mui-slider-item">
+                        <a href="#"><img src="http://d3.5ikfc.com/static/thumbs/1016/kfc-5ikfc-108_pc15.jpg" /></a>
+                    </div>
+                </div>
+                <span id="right" class="fa fa-angle-right"></span>
+            </div>
+        </div>
+        <!-- 引入模板引擎 -->
+        <script src="lib/artTemplate/template-web.js"></script>
+        <script src="lib/mui/js/mui.js"></script>
+        <!--引入zeptojs文件 -->
+        <script src="./lib/zepto/zepto.min.js"></script>
+        <script src="./lib/zepto/zepto.picLazyLoad.js"></script>
+        <script src="js/07-coiponproduct.js"></script>
+        <script src="js/base.js"></script>
+        <!-- 准备优惠券列表模板 -->
+        <script type='text/html' id='couponproductTpl'>
+            {{each result value}}
+            <li class="mui-table-view-cell mui-media swiper-container">
+                    <a href="javascript:;" class="swiper-wrapper" id='{{value.couponProductId}}'>
+                        <img src='{{value.couponProductImg.split('"')[1]}}' class="swiper-slide" alt="">
+                        <div class="mui-media-body">
+                            <div class="product-name">
+                                <p>{{value.couponProductName}}</p>
+                            </div>
+                            <div class="money">
+                                <p>{{value.couponProductPrice}}</p>
+                                <i class="fa fa-angle-right"></i>
+                            </div>
+                            <div class="product-info mui-clearfix">
+                                <span>{{value.couponProductTime}}</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                {{/each}}
+    </script>
+        <!-- 准备遮罩层图片轮播模板 -->
+        <script type='text/html' id='couponproductTpl2'>
+            {{each result value}}
+        <div class="mui-slider-item">
+                    <a href="#" >{{@value.couponProductImg}}</a>
+                </div>
+                {{/each}}
+    </script>
+</body>
+
+</html>

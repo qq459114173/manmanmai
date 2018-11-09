@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> 购物商城导航--慢慢买</title>
+    <!--添加视口-->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- 引入MUI框架包 -->
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <!-- 引入incon图标 -->
+    <link rel="icon" href="./images/慢.png" type="image/x-icon">
+    <!-- 引入字体库 -->
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+    <!-- 引入swiper文件 -->
+    <link rel="stylesheet" href="lib/swiper/css/swiper.css">
+    <!-- 引入less文件 -->
+    <link rel="stylesheet" href="./less/09-storeNav.css">
+    <script src="./lib/less/less.js"></script>
+    <script src="js/rem.js"></script>
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <a href="01-index.html" class="return fa fa-angle-left">
+        </a>
+        <h4>商城导航</h4>
+        <img src="./images/header_app.png" alt="">
+    </header>
+        <!-- 主体区域 -->
+        <main id="main">
+            <!-- 主体部分 -->
+            <section class="section">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <!-- 侧边栏区域 -->
+                            <aside id="aside">
+                                <ul>
+                                    <li class="active"><a href="#">常用商城</a></li>
+                                    <li><a href="#">品牌官网</a></li>
+                                    <li><a href="#">时尚品牌</a></li>
+                                    <li><a href="#">购物官网</a></li>
+                                    <li><a href="#">跨境海淘</a></li>
+                                    <li><a href="#">热门推荐</a></li>
+                                    <li><a href="#">海外代购</a></li>
+                                    <li><a href="#">烟酒茶类</a></li>
+                                    <li><a href="#">美晴美团</a></li>
+                                    <li><a href="#">点评药妆</a></li>
+                                    <li><a href="#">酒美品质</a></li>
+                                    <li><a href="#">酒店预订</a></li>
+                                    <li><a href="#">旅游官网</a></li>
+                                    <li><a href="#">青芒果网</a></li>
+                                    <li><a href="#">小米商城</a></li>
+                                    <li><a href="#">华为商城</a></li>
+                                </ul>
+                            </aside>
+                            <!-- 正文区域 -->
+                            <article id="article">
+                                <div class="content">
+                                    <div class="content-l">
+                                        <a href="#">
+                                        <img src="./images/ic_bcj.png" alt="">
+                                        <span>天猫商城</span>
+                                    </a>
+                                    </div>
+                                    <div class="content-l">
+                                        <a href="#">
+                                        <img src="./images/ic_bcj.png" alt="">
+                                        <span>天猫商城</span>
+                                    </a>
+                                    </div>
+                                    <div class="content-l">
+                                        <a href="#">
+                                        <img src="./images/ic_bcj.png" alt="">
+                                        <span>天猫商城</span>
+                                    </a>
+                                    </div>
+                                    <div class="content-l">
+                                        <a href="#">
+                                        <img src="./images/ic_bcj.png" alt="">
+                                        <span>天猫商城</span>
+                                    </a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- 尾部登录注册部分 -->
+        <footer id="footer">
+            <div class="container-fluid">
+                <div class="mui-row">
+                    <div class="mui-col-xs-4">
+                        <a href="./01-indexlogin.html">登录</a>
+                    </div>
+                    <div class="mui-col-xs-4">
+                        <a href="./01-indexRegister.html">注册</a>
+                    </div>
+                    <div class="mui-col-xs-4">
+                        <a href="#" id='top'>
+                        <img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">
+                        <span>返回顶部</span>
+                    </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <p>
+                    <a class="app" href="http://android.myapp.com/myapp/detail.htm?apkName=com.manmanbuy.bijia&ADTAG=mobile">手机APP下载</a>
+                    <a href="#">慢慢买手机版</a> -- 掌上比价平台
+                </p>
+                <p>
+                    m.manmanbuy.com
+                </p>
+            </div>
+        </footer>
+        <!-- 引入模板引擎 -->
+        <script src="lib/artTemplate/template-web.js"></script>
+        <script src="lib/mui/js/mui.js"></script>
+        <script src="./lib/zepto/zepto.min.js"></script>
+        <script src="js/09-storeNav.js"></script>
+        <script src="lib/swiper/js/swiper.js"></script>
+        <!-- 准备主体内容模板 -->
+        <script type='text/html' id='storeNavtpl'>
+            {{each result value index}}
+        <div class="content-l">
+            <a href="{{value.navHref}}">
+                <img src="{{value.navImg}}" alt="">
+                <span>{{value.navTitle}}</span>
+            </a>
+        </div>
+        {{/each}}
+    </script>
+</body>
+
+</html>

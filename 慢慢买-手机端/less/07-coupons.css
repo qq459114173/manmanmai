@@ -1,0 +1,85 @@
+@import 'base.css';
+/* 头部部分 */
+ #header {
+     width: 100%;
+     display: flex;
+     text-align: center;
+     z-index: 999;
+     max-width: 7.5rem;
+     height: 0.4rem;
+     background-color: #f4483e;
+}
+ #header > .return {
+     width: 0.4rem;
+     height: 0.4rem;
+     display: block;
+     font-size: 0.3rem;
+     color: #fff;
+     line-height: 0.4rem;
+     float: left;
+     font-weight: normal;
+}
+ #header > h4 {
+     flex: 1;
+     color: #fff;
+     line-height: 0.4rem;
+     font-weight: normal;
+}
+ #header > img {
+     margin-top: 0.05rem;
+     margin-right: 0.1rem;
+     width: 0.3rem;
+     height: 0.3rem;
+     float: right;
+}
+/* 主体区域 */
+ #main #section ul {
+     width: 100%;
+     display: flex;
+     flex-wrap: wrap;
+     padding: 0.1rem 0.05rem;
+}
+ #main #section ul li {
+     width: 32.3%;
+     border: 1px solid #e6e6e6;
+     margin-right: 0.05rem;
+     margin-bottom: 0.05rem;
+     height: 0.8rem;
+}
+ #main #section ul li:nth-child(3n) {
+     margin-right: 0rem;
+}
+ #main #section ul li a {
+     width: 100%;
+}
+ #main #section ul li a > img {
+     width: 0.5rem;
+     display: block;
+     margin: 0 auto;
+}
+ #main #section ul li a span {
+     width: 100%;
+     text-align: center;
+     display: block;
+     font-size: 0.14rem;
+}
+ #main .title {
+     height: 0.41rem;
+     background: #efefef;
+     background-image: linear-gradient(#ffffff, #efefef);
+     border-radius: 0.05rem;
+     border: 1px solid #dddddd;
+     line-height: 0.4rem;
+     font-weight: bold;
+     font-size: 0.14rem;
+     padding: 0 0.05rem;
+     margin: 0.2rem 0;
+}
+ #main .title > ul > li {
+     float: left;
+     margin-right: 0.1rem;
+}
+ #main .title > ul > li a {
+     color: #000;
+}
+ 

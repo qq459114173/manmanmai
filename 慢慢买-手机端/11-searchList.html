@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> 慢慢买--搜索中心</title>
+    <!--添加视口-->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- 引入MUI框架包 -->
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <!-- 引入incon图标 -->
+    <link rel="icon" href="./images/慢.png" type="image/x-icon">
+    <!-- 引入字体库 -->
+    <!-- <link rel="stylesheet" href="./font/font_u9sb87clzak/iconfont.css"> -->
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+    <!-- 引入less文件 -->
+    <link rel="stylesheet/less" href="./less/11.searchList.less">
+    <script src="./lib/less/less.js"></script>
+    <script src="js/rem.js"></script>
+</head>
+
+<body>
+    <!-- 头部部分 -->
+    <header id="header">
+        <a href="javascript:history.back();" class="return fa fa-angle-left">
+        </a>
+        <h4>慢慢买--搜索中心</h4>
+        <img src="./images/header_app.png" alt="">
+    </header>
+        <!-- 搜索框部分 -->
+        <section id="search">
+            <div class="searchtext pull-left">
+                <input type="text" placeholder="请输入你想搜索的商品">
+            </div>
+            <div class="searchbtn pull-right">
+                <a href="#">
+                <input type="button" value="搜索">
+            </a>
+            </div>
+        </section>
+        <!-- 主体区域 -->
+        <main id="main">
+            <div class="search-history">
+                <div class="title mui-clearfix">
+                    <span class="mui-pull-left">搜索历史</span>
+                    <a href="#" class="mui-pull-right"><i class="fa fa-trash"></i>清空记录</a>
+                </div>
+                <div class="content">
+                    <ul>
+                        <li>
+                            <a href="#"><span>2</span></a><i class="fa fa-close mui-pull-right"></i></li>
+                        <li>
+                            <a href="#"><span>2</span></a><i class="fa fa-close mui-pull-right"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+        <!-- 尾部登录注册部分 -->
+        <footer id="footer">
+            <div class="container-fluid">
+                <div class="mui-row">
+                    <div class="mui-col-xs-4">
+                        <a href="./01-indexlogin.html">登录</a>
+                    </div>
+                    <div class="mui-col-xs-4">
+                        <a href="./01-indexRegister.html">注册</a>
+                    </div>
+                    <div class="mui-col-xs-4">
+                        <a href="#" id='top'>
+                        <img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">
+                        <span>返回顶部</span>
+                    </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <p>
+                    <a class="app" href="http://android.myapp.com/myapp/detail.htm?apkName=com.manmanbuy.bijia&ADTAG=mobile">手机APP下载</a>
+                    <a href="#">慢慢买手机版</a> -- 掌上比价平台
+                </p>
+                <p>
+                    m.manmanbuy.com
+                </p>
+            </div>
+        </footer>
+        <!-- 引入模板引擎 -->
+        <script src="lib/artTemplate/template-web.js"></script>
+        <script src="lib/mui/js/mui.js"></script>
+        <script src="./lib/zepto/zepto.min.js"></script>
+        <script src="js/11.searchList.js"></script>
+        <script src="js/base.js"></script>
+        <!-- 引入搜索历史记录 -->
+        <script type='text/html' id='searchTpl'>
+            {{if list.length>0}} {{each list value index}}
+        <li>
+            <a href="11-productlist.html?search={{value}}">
+                <span>{{value}}</span>
+            </a>
+            <i class="fa fa-close mui-pull-right" data-id={{index}}></i>
+        </li>
+        {{/each}} {{else}}
+        <li>
+            <p>没有搜索记录</p>
+        </li>
+        {{/if}}
+    </script>
+</body>
+
+</html>

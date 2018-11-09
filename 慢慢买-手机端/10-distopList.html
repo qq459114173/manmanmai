@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>乐视平板电视-比价选购-慢慢买手机版</title>
+    <!--添加视口-->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- 引入MUI框架包 -->
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <!-- 引入incon图标 -->
+    <link rel="icon" href="./images/慢.png" type="image/x-icon">
+    <!-- 引入字体库 -->
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+    <!-- 引入less文件 -->
+    <link rel="stylesheet" href="./less/10.distopList.css">
+    <script src="./lib/less/less.js"></script>
+    <script src="js/rem.js"></script>
+</head>
+
+<body>
+    <!-- 头部部分 -->
+    <header id="header">
+        <div class="pull-left">
+            <a href="01-index.html">
+                <img src="./images/header_logo.png" alt="">
+            </a>
+        </div>
+        <div class="pull-right">
+            <a href="http://android.myapp.com/myapp/detail.htm?apkName=com.manmanbuy.bijia&ADTAG=mobile" target="_black">
+                <img src="./images/header_app.png" alt="">
+            </a>
+        </div>
+    </header>
+    <!-- 搜索框部分 -->
+    <section id="search">
+        <div class="searchtext pull-left">
+            <input type="text" placeholder="请输入你想比价的商品">
+        </div>
+        <div class="searchbtn pull-right">
+            <input type="button" value="搜索">
+        </div>
+    </section>
+    <!-- 主体区域 -->
+    <main id="main">
+        <section id='section'>
+            <!-- 标题部分 -->
+            <div class="title">
+                <ul>
+                    <li><a href="01-index.html">首页></a></li>
+                    <li><a href="10-distop.html?brandtitleid=0">全部分类 ></a></li>
+                    <li id='subTitle'><a href="10-distopList.html"></a></li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-filter"></i> 筛选
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <h1>乐视电视</h1>
+            <!-- 主体内容部分 -->
+            <div class="content">
+                <ul class="mui-table-view">
+                </ul>
+            </div>
+            <!-- 分页部分 -->
+            <div id="page">
+                <button class='pre'><a href="#">上一页</a></button>
+                <select name="" id="select">
+                    <option>1/1<option>
+                </select>
+                <i class="fa fa-caret-down"></i>
+                <button class='next'><a href="#">下一页</a></button>
+            </div>
+        </section>
+    </main>
+    <!-- 尾部登录注册部分 -->
+    <footer id="footer">
+        <div class="container-fluid">
+            <div class="mui-row">
+                <div class="mui-col-xs-4">
+                    <a href="./01-indexlogin.html">登录</a>
+                </div>
+                <div class="mui-col-xs-4">
+                    <a href="./01-indexRegister.html">注册</a>
+                </div>
+                <div class="mui-col-xs-4">
+                    <a href="#" id='top'>
+                        <img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">
+                        <span>返回顶部</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>
+                <a class="app" href="http://android.myapp.com/myapp/detail.htm?apkName=com.manmanbuy.bijia&ADTAG=mobile">手机APP下载</a>
+                <a href="#">慢慢买手机版</a> -- 掌上比价平台
+            </p>
+            <p>
+                m.manmanbuy.com
+            </p>
+        </div>
+    </footer>
+    <!-- 引入模板引擎 -->
+    <script src="lib/artTemplate/template-web.js"></script>
+    <script src="lib/mui/js/mui.js"></script>
+    <!--引入zeptojs文件 -->
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <script src="js/10.distioList.js"></script>
+    <script src="js/base.js"></script>
+    <!-- 准备商品列表模板 -->
+    <script type='text/html' id='listTpl'>
+        <li class="mui-table-view-cell mui-media" >
+       <a href="#" id='{{list.productId}}'>
+           {{@list.productImg}}
+           <div class="mui-media-body">
+               <div class="product-name">
+                   <p>{{list.productName}}</p>
+               </div>
+               <div class="money">
+                   <p>{{list.productPrice}}</p>
+               </div>
+               <div class="product-info mui-clearfix">
+                   <span class="mui-pull-left">{{list.productQuote}}</span>
+                   <span class="mui-pull-right">{{list.productCom}}</span>
+               </div>
+           </div>
+       </a>
+   </li>
+    </script>
+</body>
+
+</html>

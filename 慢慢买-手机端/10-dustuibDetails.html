@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>比价选购-慢慢买手机版</title>
+    <!--添加视口-->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- 引入MUI框架包 -->
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <!-- 引入incon图标 -->
+    <link rel="icon" href="./images/慢.png" type="image/x-icon">
+    <!-- 引入字体库 -->
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+    <!-- 引入less文件 -->
+    <link rel="stylesheet" href="./less/storeDetails.css">
+    <script src="./lib/less/less.js"></script>
+    <script src="js/rem.js"></script>
+</head>
+
+<body>
+    <!-- 头部部分 -->
+    <header id="header">
+        <div class="pull-left">
+            <a href="01-index.html">
+                <img src="./images/header_logo.png" alt="">
+            </a>
+        </div>
+        <div class="pull-right">
+            <a href="http://android.myapp.com/myapp/detail.htm?apkName=com.manmanbuy.bijia&ADTAG=mobile" target="_black">
+                <img src="./images/header_app.png" alt="">
+            </a>
+        </div>
+    </header>
+    <!-- 搜索框部分 -->
+    <section id="search">
+        <div class="searchtext pull-left">
+            <input type="text" placeholder="请输入你想比价的商品">
+        </div>
+        <div class="searchbtn pull-right">
+            <input type="button" value="搜索">
+        </div>
+    </section>
+    <!-- 主体区域 -->
+    <main id="main">
+        <section id='section'>
+            <!-- 标题部分 -->
+            <div class="title">
+                <ul>
+                    <li><a href="01-index.html">首页 ></a></li>
+                    <li id='name'><a href="#" onclick="javascript:history.back(-1)">电视></a></li>
+                    <li id='subTitle'><a href="10-dustuibDetails.html">乐视TV</a></li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-filter"></i> 筛选
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- 商品详情部分 -->
+        <section class="details">
+            <!-- 商品标题部分 -->
+            <div class="tit">
+                <p>乐视TV(Letv)S50 Air全配版2D 50英寸 全高清LED液晶电视</p>
+            </div>
+            <!-- 商品图片部分 -->
+            <div class="pic">
+                <img src="http://pro.zuyushop.com:8015/ProPic/20166/Thumb/Thumb_2016060015515937123.png" alt="">
+                <a href="#">
+                   <img src="http://www.zuyushop.com/wap/images/sc.jpg" alt="" width='39px' height='39px'>
+               </a>
+            </div>
+        </section>
+        <!-- 比价购买部分 -->
+        <section class="tab">
+            <ul>
+                <li class="cur"><a href="#">比价购买</a></li>
+                <li class="mtab"><a href="#">产品参数</a></li>
+                <li><a href="#">优选评价</a></li>
+            </ul>
+        </section>
+        <!-- 比价购买店铺 -->
+        <section class="bjShop">
+            <table width="100%">
+                <tbody>
+                    <tr>
+                        <td rowspan="2" class="p_pic" valign="top"> <a href="redirect.aspx?webid=1&amp;bjid=76069915&amp;tourl=http://item.jd.com/1162187.html&amp;y=bijia" target="_blank" onclick="trackLog('商品购买','比价页面');"> <img src="http://sf.manmanbuy.com/images/sitelogo/1.png"></a> </td>
+                        <td> <a href="redirect.aspx?webid=1&amp;bjid=76069915&amp;tourl=http://item.jd.com/1162187.html&amp;y=bijia" target="_blank" onclick="trackLog('商品购买','比价页面');">京东商城</a> </td>
+                        <td class="red"> ￥1999.00 </td>
+                        <td align="center" width="60"> <span style="display: inline-block;width: 56px;height: 24px;border-radius: 6px;text-align: center;line-height: 24px;background-color: #ff5500;color: #fff;font-size: 14px;">去购买</span> </td>
+                    </tr>
+                    <tr class=\"tab2\">
+                        <td> </td>
+                        <td class=\"r\"> </td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <!-- 补充说明 -->
+        <section class="note">
+            * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。
+        </section>
+        <!-- 优选网友评价 -->
+        <section class="pj_t">
+            <p>优选网友评价</p>
+        </section>
+        <!-- 网友评价列表 -->
+        <section class="pj_list">
+            <div class="list">
+                <table width="100%">
+                    <tbody>
+                        <tr>
+                            <td class="name" align="left">m***5 </td>
+                            <td align="right">2017/10/10 </td>
+                        </tr>
+                        <tr>
+                            <td align="left"> <span class="star">★★★★★</span> </td>
+                            <td align="right"> 购买自：京东商城 </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="pj_C">很好，性价比高，速度快，更优惠点更好 </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="pj_C"><a href="discomment.aspx?id=569609&amp;cid=44563411" style="font-size:12px; color:#999;">回复</a> </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <!-- 查看更多评价 -->
+        <section class="more">
+            <a href="#">查看更多评价</a>
+        </section>
+    </main>
+    <!-- 尾部登录注册部分 -->
+    <footer id="footer">
+        <div class="container-fluid">
+            <div class="mui-row">
+                <div class="mui-col-xs-4">
+                    <a href="./01-indexlogin.html">登录</a>
+                </div>
+                <div class="mui-col-xs-4">
+                    <a href="./01-indexRegister.html">注册</a>
+                </div>
+                <div class="mui-col-xs-4">
+                    <a href="#" id='top'>
+                        <img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">
+                        <span>返回顶部</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>
+                <a class="app" href="http://android.myapp.com/myapp/detail.htm?apkName=com.manmanbuy.bijia&ADTAG=mobile">手机APP下载</a>
+                <a href="#">慢慢买手机版</a> -- 掌上比价平台
+            </p>
+            <p>
+                m.manmanbuy.com
+            </p>
+        </div>
+    </footer>
+    <!-- 引入模板引擎 -->
+    <script src="lib/artTemplate/template-web.js"></script>
+    <script src="lib/mui/js/mui.js"></script>
+    <!--引入zeptojs文件 -->
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <script src="js/10-dustuibDetails.js"></script>
+    <script src="js/base.js"></script>
+    <!-- 准备商品详情模板 -->
+    <script type='text/html' id='detailsTpl'>
+        {{each result value index}}
+            <!-- 商品标题部分 -->
+            <div class="tit">
+                <p>{{value.productName}}</p>
+            </div>
+            <!-- 商品图片部分 -->
+            <div class="pic">
+                {{@value.productImg}}
+                <a href="#">
+                   <img src="http://www.zuyushop.com/wap/images/sc.jpg" alt="" width='39px' height='39px'>
+               </a>
+            </div>
+            {{/each}}
+    </script>
+    <!-- 准备比价购买模板 -->
+    <script type='text/html' id='detailsTpl2'>
+        {{each result value}}
+            {{@value.bjShop}}
+        {{/each}}
+    </script>
+    <!-- 准备商品评论模板 -->
+    <script type='text/html' id='datailsTpl3'>
+        {{each result value}}
+         <div class="list">
+                <table width="100%">
+                    <tbody>
+                        <tr>
+                            <td class="name" align="left">{{value.comName}}</td>
+                            <td align="right">{{value.comTime}} </td>
+                        </tr>
+                        <tr>
+                            <td align="left"> <span class="star">★★★★★</span> </td>
+                            <td align="right">{{value.comFrom}}</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="pj_C">{{value.comContent}}</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="pj_C"><a href="discomment.aspx?id=569609&amp;cid=44563411" style="font-size:12px; color:#999;">回复</a> </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            {{/each}}
+    </script>
+</body>
+</ html>

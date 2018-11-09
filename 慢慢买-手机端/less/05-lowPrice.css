@@ -1,0 +1,153 @@
+@import 'base.css';
+ body {
+     background-color: #f7f7f7;
+}
+/* 头部部分 */
+ #header {
+     width: 100%;
+     display: flex;
+     text-align: center;
+     z-index: 999;
+     max-width: 7.5rem;
+     height: 0.4rem;
+     background-color: #f4483e;
+}
+ #header > .return {
+     width: 0.4rem;
+     height: 0.4rem;
+     display: block;
+     font-size: 0.3rem;
+     color: #fff;
+     line-height: 0.4rem;
+     float: left;
+     font-weight: normal;
+}
+ #header > h4 {
+     flex: 1;
+     color: #fff;
+     line-height: 0.4rem;
+     font-weight: normal;
+}
+ #header > img {
+     margin-top: 0.05rem;
+     margin-right: 0.1rem;
+     width: 0.3rem;
+     height: 0.3rem;
+     float: right;
+}
+/* 导航区域 */
+ #nav {
+     width: 100%;
+     overflow: hidden;
+     position: relative;
+}
+ #nav .swiper-wrapper {
+     width: 100%;
+     height: 100%;
+}
+ #nav .swiper-wrapper .swiper-slide {
+     width: auto;
+     font-size: 0.16rem;
+     -webkit-box-sizing: border-box;
+     box-sizing: border-box;
+}
+ #nav .swiper-wrapper .swiper-slide ul {
+     height: 0.3rem;
+     line-height: 0.3rem;
+     padding-right: 0.35rem;
+}
+ #nav .swiper-wrapper .swiper-slide ul > li {
+     float: left;
+     margin-left: 0.15rem;
+}
+ #nav .swiper-wrapper .swiper-slide ul > li.active {
+     border-bottom: 0.02rem solid #f00;
+}
+ #nav .swiper-wrapper .swiper-slide ul > li.active a {
+     color: #ea6769;
+}
+ #nav .swiper-wrapper .swiper-slide ul > li > a {
+     display: block;
+}
+ #main #section {
+     max-width: 9.6rem;
+}
+ #main #section > ul > li {
+     padding: 0.1rem 0;
+     border-top: 0.05rem solid #f7f7f7;
+}
+ #main #section > ul > li img {
+     width: 1.2rem;
+     height: 1.6rem;
+     max-width: 1.2rem;
+     margin-right: 0.05rem;
+     float: left;
+}
+ #main #section > ul > li .product-name p {
+     color: #000;
+     font-size: 0.16rem;
+}
+ #main #section > ul > li .money {
+     margin-top: 0.15rem;
+     color: #fc1e59;
+     font-size: 0.18rem;
+}
+ #main #section > ul > li .money em {
+     font-style: normal;
+     font-size: 0.12rem;
+     margin: 0 0.02rem;
+}
+ #main #section > ul > li .money del {
+     font-size: 0.14rem;
+     color: #aaa7a5;
+     margin-left: 0.05rem;
+}
+ #main #section > ul > li .bar {
+     margin-top: 0.2rem;
+     overflow: hidden;
+}
+ #main #section > ul > li .bar span {
+     width: 1.05rem;
+     height: 0.2rem;
+     float: left;
+     border: 1px solid #f4483e;
+     background-color: #ffb7b7;
+     border-radius: 0.1rem;
+     line-height: 0.2rem;
+     text-align: center;
+     color: #fff;
+     font-size: 0.14rem;
+}
+ #main #section > ul > li .bar b {
+     margin-left: 0.05rem;
+     font-size: 0.14rem;
+     color: #fc5054;
+}
+ #main #section > ul > li .discounts {
+     margin-top: 0.2rem;
+}
+ #main #section > ul > li .discounts .left {
+     float: left;
+     border: 1px solid #e8585b;
+     padding: 0.05rem;
+}
+ #main #section > ul > li .discounts .left a {
+     color: #e8585b;
+     font-size: 0.14rem;
+     font-weight: 700;
+}
+ #main #section > ul > li .discounts .right {
+     float: right;
+     background-color: #ff5e5d;
+     padding: 0.05rem 0.02rem;
+     border-radius: 0.04rem;
+     margin-right: 0.05rem;
+}
+ #main #section > ul > li .discounts .right a {
+     color: #fff;
+     font-size: 0.16rem;
+}
+ #footer {
+     margin-top: 0.3rem;
+}
+ 

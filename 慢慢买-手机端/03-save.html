@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>最新优惠 -省钱控 -慢慢买</title>
+    <!--添加视口-->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- 引入MUI框架包 -->
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <!-- 引入incon图标 -->
+    <link rel="icon" href="./images/慢.png" type="image/x-icon">
+    <!-- 引入字体库 -->
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet" href="./font/font_u9sb87clzak/iconfont.css">
+    <!-- 引入less文件 -->
+    <link rel="stylesheet" href="./less/03-save.css">
+    <script src="./lib/less/less.js"></script>
+    <script src="js/rem.js"></script>
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <a href="01-index.html" class="return fa fa-angle-left">
+        </a>
+        <h4>省钱控 - 最新优惠</h4>
+        <img src="./images/header_app.png" alt="">
+    </header>
+        <!-- 主体区域 -->
+        <main id="main">
+            <section id='section'>
+                <!-- 折扣推荐内容 -->
+                <div class="content" id='dis'>
+                    <ul class="mui-table-view">
+                        <li class="mui-table-view-cell mui-media">
+                            <a href="javascript:;">
+                            <img class="mui-media-object mui-pull-left" src="http://wnzk-img.zuyushop.com/r_img/img/20180912/17/c2ac81a62bf541c9aa11b04df5e2bea2.jpg">
+                            <div class="mui-media-body">
+                                <div class="product-name">
+                                    <p>鹤王 山东即食阿胶固元糕520g <span>39元包邮（券后）</span></p>
+                                </div>
+                                <div class="product-info mui-clearfix">
+                                    <span class="mui-pull-left">天猫旗舰店 | 09-27 16:29</span>
+                                    <span class="mui-pull-right">
+                                <i class="iconfont icon-xiaoxi"></i>0</span>
+                                </div>
+                            </div>
+                        </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 分页部分 -->
+                <div id="page">
+                    <button class='pre'><a href="#">上一页</a></button>
+                    <select name="" id="select">
+                    </select>
+                    <i class="fa fa-caret-down"></i>
+                    <button class='next'><a href="#">下一页</a></button>
+                </div>
+            </section>
+        </main>
+        <!-- 尾部登录注册部分 -->
+        <footer id="footer">
+            <div class="container-fluid">
+                <div class="mui-row">
+                    <div class="mui-col-xs-4">
+                        <a href="./01-indexlogin.html">登录</a>
+                    </div>
+                    <div class="mui-col-xs-4">
+                        <a href="./01-indexRegister.html">注册</a>
+                    </div>
+                    <div class="mui-col-xs-4">
+                        <a href="#" id='top'>
+                        <img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">
+                        <span>返回顶部</span>
+                    </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <p>
+                    <a class="app" href="http://android.myapp.com/myapp/detail.htm?apkName=com.manmanbuy.bijia&ADTAG=mobile">手机APP下载</a>
+                    <a href="#">慢慢买手机版</a> -- 掌上比价平台
+                </p>
+                <p>
+                    m.manmanbuy.com
+                </p>
+            </div>
+        </footer>
+        <!-- 引入模板引擎 -->
+        <script src="lib/artTemplate/template-web.js"></script>
+        <script src="lib/mui/js/mui.js"></script>
+        <!--引入zeptojs文件 -->
+        <script src="./lib/zepto/zepto.min.js"></script>
+        <script src="js/03-save.js"></script>
+        <script src="js/base.js"></script>
+        <!-- 准备模板 -->
+        <script type='text/html' id='saveTpl'>
+            {{each result value }}
+        <li class="mui-table-view-cell mui-media">
+            <a href="javascript:;" id='{{value.productId}}'>
+                    {{@value.productImgSm.replace('http://cacheimg.manmanbuy.com/r_img/cacheimg.aspx?width=600&amp;imgurl=','')}}
+                        <div class="mui-media-body">
+                            <div class="product-name">
+                                <p>{{value.productName}}<span>{{value.productPinkage}}</span></p>
+                            </div>
+                            <div class="product-info mui-clearfix">
+                                <span class="mui-pull-left">{{value.productFrom}}| {{value.productTime}}</span>
+                                <span class="mui-pull-right">
+                                <i class="iconfont icon-xiaoxi"></i>{{value.productComCount.replace('有','').replace('人评论','')}}</span>
+                            </div>
+                        </div>
+                    </a>
+        </li>
+        {{/each}}
+    </script>
+</body>
+
+</html>
